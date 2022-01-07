@@ -1,0 +1,68 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Iphone13",
+    "description": "Apple iPhone 13 spacegrey",
+    "category": "1",
+    "remainder": 10,
+    "price": "1450.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Apple Watch",
+    "description": "Apple Watch series 5",
+    "category": "0",
+    "remainder": 5,
+    "price": "350.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "galaxy s-10",
+    "description": "Samsung Galaxy s10",
+    "category": "1",
+    "remainder": 20,
+    "price": "1000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "MacBook Air",
+    "description": "",
+    "category": "2",
+    "remainder": 5,
+    "price": "1500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "Toshiba",
+    "description": "Toshiba 512 gb",
+    "category": "2",
+    "remainder": 3,
+    "price": "500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "Powerbank",
+    "description": "",
+    "category": "0",
+    "remainder": 15,
+    "price": "500.00"
+  }
+}
+]
