@@ -5,6 +5,6 @@
     {% for product in products %}
         <p>{{ product.name }} | {{ product.get_category_display }}</p>
         <p>Price: {{ product.price }}</p>
-        <a href="#">More...</a>
+        <a href="{% url 'product_view' product.pk %}">More...</a>
     {% endfor %}
 {% endblock %}
