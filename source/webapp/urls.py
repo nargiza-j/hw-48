@@ -1,5 +1,7 @@
 from django.urls import path
 
+from webapp.views import index_view
+
 urlpatterns = [
-    # path('demo/', demo_view)
+     path('', index_view)
 ]
