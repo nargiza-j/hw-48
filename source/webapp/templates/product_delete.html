@@ -8,5 +8,5 @@
         <h2>Are you sure want to delete {{ product.name }} ?</h2>
         <input type="submit" value="Yes">
     </form>
-    <button><a href="{% url 'product_view' product.pk %}">No</a></button>
+    <button><a class="no_button" href="{% url 'product_view' product.pk %}">No</a></button>
 {% endblock %}
