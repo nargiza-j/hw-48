@@ -41,6 +41,11 @@ def product_update_view(request, pk):
     else:
         form = ProductForm(data=request.POST)
         if form.is_valid():
+            product.name = form.cleaned_data.get('name')
+            product.description = form.cleaned_data.get('description')
+            product.category = form.cleaned_data.get('category')
+            product.remainder = form.cleaned_data.get('remainder')
+            product.price = form.cleaned_data.get('price')
             product = form.save()
             return redirect('product_view', pk=product.pk)
         return render(request, 'product_update.html', {"product": product, "form": form})
