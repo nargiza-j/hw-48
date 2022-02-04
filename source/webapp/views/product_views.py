@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
-
+from django.views.generic import DetailView, CreateView
 
 from webapp.forms import ProductForm
 from webapp.models import Product
@@ -20,21 +20,27 @@ class ProductList(SearchView):
         return queryset.filter(remainder__gte=1).order_by('category', 'name')
 
 
-def product_view(request, pk):
-    product = Product.objects.get(pk=pk)
-    return render(request, "products/product_view.html", {'product': product})
+class ProductView(DetailView):
+    model = Product
+    template_name = "products/product_view.html"
 
 
-def create_product_view(request):
-    if request.method == 'GET':
-        form = ProductForm()
-        return render(request, 'products/product_create.html', {"form": form})
-    else:
-        form = ProductForm(data=request.POST)
-        if form.is_valid():
-            new_product = form.save()
-            return redirect('product_view', pk=new_product.pk)
-        return render(request, 'products/product_create.html', {"form": form})
+class ProductCreate(CreateView):
+    model = Product
+    form_class = ProductForm
+    template_name = 'products/product_create.html'
+
+
+# def create_product_view(request):
+#     if request.method == 'GET':
+#         form = ProductForm()
+#         return render(request, 'products/product_create.html', {"form": form})
+#     else:
+#         form = ProductForm(data=request.POST)
+#         if form.is_valid():
+#             new_product = form.save()
+#             return redirect('product_view', pk=new_product.pk)
+#         return render(request, 'products/product_create.html', {"form": form})
 
 
 def product_update_view(request, pk):
