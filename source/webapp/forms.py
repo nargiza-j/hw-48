@@ -10,3 +10,6 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = "__all__"
 
+
+class SearchForm(forms.Form):
+    search = forms.CharField(max_length=30, required=False, label="Найти")
