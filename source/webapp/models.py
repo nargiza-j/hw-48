@@ -24,3 +24,16 @@ class Product(models.Model):
         verbose_name = 'product'
         verbose_name_plural = 'products'
 
+
+class Cart(models.Model):
+    product = models.ForeignKey("webapp.Product", on_delete=models.CASCADE, related_name="cart", verbose_name="Товар в корзине")
+    qty = models.PositiveIntegerField(verbose_name='количество товара в корзине')
+
+    def __str__(self):
+        return f'{self.product.name} - {self.qty}'
+
+    class Meta:
+        db_table = 'cart'
+        verbose_name = 'product in cart'
+        verbose_name_plural = 'products in cart'
+

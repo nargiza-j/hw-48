@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
+
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'cart' %}">Cart</a>
+    </li>
+{% endblock %}
 {% block content %}
     {% include 'partial/simple_search.html' %}
     {% if is_paginated %}
@@ -15,6 +21,7 @@
               <a href="{% url 'product_view' product.pk %}" class="card-link">More...</a>
               <a href="{% url "product_update" product.pk %}" class="card-link">Update</a>
               <a href="{% url "product_delete" product.pk %}" class="card-link">Delete</a>
+              <button type="button" name="add_to_cart">Добавить в корзину</button>
           </div>
         </div>
     {% endfor %}

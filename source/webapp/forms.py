@@ -13,3 +13,8 @@ class ProductForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     search = forms.CharField(max_length=30, required=False, label="Найти")
+
+
+class AddToCartForm(forms.Form):
+    quantity = forms.IntegerField(min_value=0)
+

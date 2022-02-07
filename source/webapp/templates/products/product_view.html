@@ -13,5 +13,10 @@
     <p>Description: {{ product.description }}</p>
     <p>Price: {{ product.price }}</p>
     <p>Remainder: {{ product.remainder }}</p>
+    <form>
+        {% csrf_token %}
+        <input type="text" value="" name="product">
+        <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
+    </form>
     <a href="{% url 'index' %}">Return to list of products</a>
 {% endblock %}

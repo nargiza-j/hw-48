@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+{% endblock %}
+{% block content %}
+    <p>{{ product.name }} </p>
+    <p>Price: {{ product.price }}</p>
+    <p>Quantity: {{ cart.qty }}</p>
+    <p>Total: {{ cart.qty }}*{{ product.price }}</p>
+    <a href="{% url 'index' %}">Return to list of products</a>
+{% endblock %}
