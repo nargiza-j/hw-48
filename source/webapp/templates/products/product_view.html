@@ -2,21 +2,22 @@
 
 {% block nav %}
     <li class="nav-item">
-        <a class="nav-link" href="{% url 'product_update' product.pk %}">Update Product</a>
+        <a class="nav-link" href="{% url 'webapp:product_update' product.pk %}">Update Product</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{% url 'product_delete' product.pk %}">Delete Product</a>
+        <a class="nav-link" href="{% url 'webapp:product_delete' product.pk %}">Delete Product</a>
     </li>
 {% endblock %}
 {% block content %}
-    <p>{{ product.name }} | {{ product.get_category_display }}</p>
-    <p>Description: {{ product.description }}</p>
-    <p>Price: {{ product.price }}</p>
-    <p>Remainder: {{ product.remainder }}</p>
-    <form>
-        {% csrf_token %}
-        <input type="text" value="" name="product">
-        <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
-    </form>
-    <a href="{% url 'index' %}">Return to list of products</a>
+    <div class="card">
+        <div class="card-body">
+            <h1>{{ product.name }}</h1>
+            <p class="card-text">Категория: {{ product.get_category_display }}</p>
+            <p class="card-text">Осталось: {{ product.remainder }} по {{ product.price }} $</p>
+            <p class="pre">{{ product.description }}</p>
+            <br>
+            {% include "partial/cart_add_form.html" %}
+        </div>
+    </div>
+    <a href="{% url 'webapp:index' %}">Return to list of products</a>
 {% endblock %}

@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
-{% block nav %}{% endblock %}
+{% block title %}Удаление{% endblock %}
+
+{% block nav %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'webapp:product_view' product.pk %}">Отмена</a></li>
+{% endblock %}
 
 {% block content %}
-    <form action="{% url "product_delete" product.pk %}" method="POST">
-    {% csrf_token %}
-        <h2>Are you sure want to delete {{ product.name }} ?</h2>
-        <input type="submit" value="Yes">
+    <h1>Вы уверены, что хотите удалить товар "{{ product.name }}" ({{ product.get_category_display }})?</h1>
+    <form action="{% url "webapp:product_delete" product.pk %}" method="post">
+        {% csrf_token %}
+        <div class="btn-group">
+            <button class="btn btn-danger" type="submit">Да</button>
+            <a class="btn btn-primary" href="{% url 'webapp:product_view' product.pk %}">Отмена</a>
+        </div>
     </form>
-    <button><a class="no_button" href="{% url 'product_view' product.pk %}">No</a></button>
 {% endblock %}

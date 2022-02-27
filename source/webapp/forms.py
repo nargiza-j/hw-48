@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import widgets
 
-from webapp.models import Product
+from webapp.models import Product, Cart, Order
 
 
 class ProductForm(forms.ModelForm):
@@ -15,6 +15,13 @@ class SearchForm(forms.Form):
     search = forms.CharField(max_length=30, required=False, label="Найти")
 
 
-class AddToCartForm(forms.Form):
-    quantity = forms.IntegerField(min_value=0)
+class CartForm(forms.ModelForm):
+    class Meta:
+        model = Cart
+        fields = ['qty']
 
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        exclude = ["products"]
