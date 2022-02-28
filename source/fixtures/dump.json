@@ -1,0 +1,504 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Iphone13",
+    "description": "Apple iPhone 13 spacegrey",
+    "category": "1",
+    "remainder": 5,
+    "price": "1450.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Apple Watch",
+    "description": "Apple Watch series 5",
+    "category": "0",
+    "remainder": 3,
+    "price": "350.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "galaxy s-10",
+    "description": "Samsung Galaxy s10",
+    "category": "1",
+    "remainder": 9,
+    "price": "1000.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "MacBook Air",
+    "description": "",
+    "category": "2",
+    "remainder": 5,
+    "price": "1500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "Toshiba",
+    "description": "Toshiba 512 gb",
+    "category": "2",
+    "remainder": 3,
+    "price": "500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "Powerbank",
+    "description": "",
+    "category": "0",
+    "remainder": 11,
+    "price": "500.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 7,
+  "fields": {
+    "name": "iphone13 Pro Max",
+    "description": "",
+    "category": "1",
+    "remainder": 0,
+    "price": "1800.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 8,
+  "fields": {
+    "name": "xiomi",
+    "description": "xiomi Mi red",
+    "category": "1",
+    "remainder": 14,
+    "price": "250.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 9,
+  "fields": {
+    "name": "xiomi",
+    "description": "xfgjkjk",
+    "category": "1",
+    "remainder": 0,
+    "price": "200.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 11,
+  "fields": {
+    "name": "Iphone13",
+    "description": "Apple iPhone 13 spacegrey",
+    "category": "1",
+    "remainder": 5,
+    "price": "1455.00"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 14,
+  "fields": {
+    "name": "telephone",
+    "description": "telephone",
+    "category": "1",
+    "remainder": 18,
+    "price": "500.00"
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 2,
+  "fields": {
+    "name": "nj",
+    "phone": "mksfjek",
+    "address": "efkejr",
+    "created_at": "2022-02-27T19:56:39.125Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 3,
+  "fields": {
+    "name": "test",
+    "phone": "test",
+    "address": "test",
+    "created_at": "2022-02-28T14:52:27.570Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 4,
+  "fields": {
+    "name": "testtest",
+    "phone": "tette",
+    "address": "teethe",
+    "created_at": "2022-02-28T18:24:41.509Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 5,
+  "fields": {
+    "name": "dev",
+    "phone": "2222",
+    "address": "www",
+    "created_at": "2022-02-28T18:32:43.686Z",
+    "user": 4
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 6,
+  "fields": {
+    "name": "test",
+    "phone": "ee",
+    "address": "ee",
+    "created_at": "2022-02-28T19:12:39.173Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 7,
+  "fields": {
+    "name": "test",
+    "phone": "fro",
+    "address": "rf",
+    "created_at": "2022-02-28T19:21:03.798Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 9,
+  "fields": {
+    "name": "mode",
+    "phone": "222",
+    "address": "222",
+    "created_at": "2022-02-28T19:32:36.065Z",
+    "user": 2
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 11,
+  "fields": {
+    "name": "mod",
+    "phone": "6",
+    "address": "78",
+    "created_at": "2022-02-28T19:44:51.285Z",
+    "user": 2
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 12,
+  "fields": {
+    "name": "mode",
+    "phone": "766",
+    "address": "44",
+    "created_at": "2022-02-28T19:52:08.201Z",
+    "user": 2
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 13,
+  "fields": {
+    "name": "tes",
+    "phone": "tes",
+    "address": "1",
+    "created_at": "2022-02-28T19:55:47.273Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 14,
+  "fields": {
+    "name": "test",
+    "phone": "test",
+    "address": "6",
+    "created_at": "2022-02-28T20:00:04.770Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 15,
+  "fields": {
+    "name": "test",
+    "phone": "3",
+    "address": "1",
+    "created_at": "2022-02-28T20:05:43.870Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 16,
+  "fields": {
+    "name": "test",
+    "phone": "test",
+    "address": "1",
+    "created_at": "2022-02-28T21:09:16.205Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 17,
+  "fields": {
+    "name": "anonim",
+    "phone": "77",
+    "address": "88",
+    "created_at": "2022-02-28T21:18:26.242Z",
+    "user": 1
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 18,
+  "fields": {
+    "name": "test",
+    "phone": "gg",
+    "address": "jj",
+    "created_at": "2022-02-28T21:20:48.709Z",
+    "user": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 1,
+  "fields": {
+    "product": 2,
+    "order": 2,
+    "qty": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 2,
+  "fields": {
+    "product": 6,
+    "order": 2,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "order": 2,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 4,
+  "fields": {
+    "product": 3,
+    "order": 3,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 5,
+  "fields": {
+    "product": 1,
+    "order": 3,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 6,
+  "fields": {
+    "product": 3,
+    "order": 4,
+    "qty": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 7,
+  "fields": {
+    "product": 11,
+    "order": 5,
+    "qty": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 8,
+  "fields": {
+    "product": 3,
+    "order": 6,
+    "qty": 5
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 9,
+  "fields": {
+    "product": 1,
+    "order": 7,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 10,
+  "fields": {
+    "product": 11,
+    "order": 7,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 11,
+  "fields": {
+    "product": 6,
+    "order": 7,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 14,
+  "fields": {
+    "product": 14,
+    "order": 9,
+    "qty": 5
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 15,
+  "fields": {
+    "product": 8,
+    "order": 9,
+    "qty": 3
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 18,
+  "fields": {
+    "product": 14,
+    "order": 11,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 19,
+  "fields": {
+    "product": 8,
+    "order": 11,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 20,
+  "fields": {
+    "product": 14,
+    "order": 12,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 21,
+  "fields": {
+    "product": 8,
+    "order": 12,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 22,
+  "fields": {
+    "product": 14,
+    "order": 13,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 23,
+  "fields": {
+    "product": 14,
+    "order": 14,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 24,
+  "fields": {
+    "product": 8,
+    "order": 14,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 25,
+  "fields": {
+    "product": 14,
+    "order": 15,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 26,
+  "fields": {
+    "product": 14,
+    "order": 16,
+    "qty": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 27,
+  "fields": {
+    "product": 6,
+    "order": 17,
+    "qty": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 28,
+  "fields": {
+    "product": 3,
+    "order": 18,
+    "qty": 1
+  }
+}
+]
