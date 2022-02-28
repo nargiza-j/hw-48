@@ -1,8 +1,11 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 
 # Create your models here.
 from django.db.models import F, ExpressionWrapper as E, Sum
 from django.urls import reverse
+
+User = get_user_model()
 
 CATEGORY_CHOICES = [('0', 'other'), ('1', 'smartphone'),  ('2', 'computers')]
 
@@ -60,6 +63,7 @@ class Order(models.Model):
     products = models.ManyToManyField('webapp.Product', related_name='orders',
                                       verbose_name='products', through='webapp.OrderProduct',
                                       through_fields=['order', 'product'])
+    user = models.ForeignKey(User, related_name="orders", on_delete=models.SET_DEFAULT, default=1)
 
     def __str__(self):
         return f'{self.name} - {self.phone}'

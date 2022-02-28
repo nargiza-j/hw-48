@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+{% endblock %}
+
+{% block content %}
+<h1>Профиль пользователя {{ user_object.username }}</h1>
+    <p>Имя: {{ user_object.first_name }}</p>
+    <p>Фамилия: {{ user_object.last_name }}</p>
+    <p><strong>Email:</strong>{{ user_object.email }}</p>
+    <div>
+    {% if orders %}
+        <h1>Your Orders</h1>
+    {% else %}
+        <h1>No orders yet</h1>
+    {% endif %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    {% for order in orders %}
+        <div class="card border-success" style="width: 18rem;">
+          <div class="card-body text-success">
+              <h5 class="card-title">Order number: {{ order.id }}</h5>
+              {% for product in order.products.all %}
+                  <h6>{{ product.name }}</h6>
+                  <p class="card-text">{{ product.remainder }} по {{ product.price }} $</p>
+              {% endfor %}
+          </div>
+        </div>
+{% endfor %}
+{% endblock %}

@@ -24,4 +24,4 @@ class CartForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        exclude = ["products"]
+        exclude = ["products", "user"]

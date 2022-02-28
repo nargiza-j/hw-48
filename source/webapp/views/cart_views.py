@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
@@ -14,6 +15,7 @@ class CartCreate(CreateView):
     def form_valid(self, form):
         product = get_object_or_404(Product, pk=self.kwargs.get('pk'))
         qty = form.cleaned_data.get('qty', 1)
+        self.request.session['items'] = [{'product': product, "qty": qty}]
         try:
             cart_product = Cart.objects.get(product=product)
             if cart_product.qty + qty <= product.remainder:
@@ -79,6 +81,8 @@ class OrderCreateView(CreateView):
     success_url = reverse_lazy("webapp:index")
 
     def form_valid(self, form):
+        if self.request.user.is_authenticated:
+            form.instance.user = self.request.user
         response = super().form_valid(form)
         order = self.object
 
@@ -97,3 +101,13 @@ class OrderCreateView(CreateView):
         cart_products.delete()
         return response
 
+
+class OrdersView(LoginRequiredMixin, ListView):
+    template_name = "cart/order_view.html"
+    model = Order
+    context_object_name = 'orders'
+
+    def get_queryset(self):
+        if self.request.user.is_authenticated:
+            queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
