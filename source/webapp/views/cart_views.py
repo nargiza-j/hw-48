@@ -15,6 +15,7 @@ class CartCreate(CreateView):
     def form_valid(self, form):
         product = get_object_or_404(Product, pk=self.kwargs.get('pk'))
         qty = form.cleaned_data.get('qty', 1)
+        # self.request.session['item'] = [{'product': product, 'qty': qty}]
         try:
             cart_product = Cart.objects.get(product=product)
             if cart_product.qty + qty <= product.remainder:
