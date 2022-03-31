@@ -1,3 +1,4 @@
+from rest_framework import permissions
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import IsAuthenticated, SAFE_METHODS, AllowAny, IsAdminUser
 from rest_framework.response import Response
@@ -20,18 +21,27 @@ class LogoutView(APIView):
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.filter(remainder__gte=1)
     serializer_class = ProductSerializer
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAdminUser,)
 
     def get_permissions(self):
         if self.request.method in SAFE_METHODS:
-            return [AllowAny]
-        return [IsAdminUser]
+            return []
+        return super().get_permissions()
+
+
+class UserPermission(permissions.BasePermission):
+
+    def has_permission(self, request, view):
+        if view.action == 'list':
+            return request.user.is_staff
+        elif view.action == 'create':
+            return True
+        else:
+            return False
 
 
 class OrderViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
-    # permission_classes = (IsAuthenticated,)
-
-
+    permission_classes = (UserPermission,)
 
